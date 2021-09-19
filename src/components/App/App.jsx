@@ -12,17 +12,17 @@ export default function App() {
   const leaveFeedback = option => {
     switch (option) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevState => prevState + 1);
         console.log(good);
         break;
 
       case 'neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevState => prevState + 1);
         console.log(neutral);
         break;
 
       case 'bad':
-        setBad(bad + 1);
+        setBad(prevState => prevState + 1);
         console.log(bad);
         break;
 
